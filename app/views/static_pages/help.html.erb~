@@ -1,0 +1,11 @@
+<% provide(:title, 'Help') %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GeeHood | <%= yield(:title) %></title>
+	</head>
+	<body>
+		<h1>Help</h1>
+		<p>Help page in construction! Please wait!</p>
+	</body>
+</html>
