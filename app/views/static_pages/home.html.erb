@@ -1,3 +1,12 @@
-<h1>GeeHood</h1>
-<p>In Construction!</p>
+<div class="center hero-unit">
+	<h1>Welcome to GeeHood</h1>
+	<h2>GeeHood is currently under construction! Please check back later.</h2>
+
+	<% unless user_signed_in? %>	
+		<%= link_to "Sign Up!", "#", class: "btn btn-large btn-primary" %>
+	<% end %>
+
+</div>
+
+
 
