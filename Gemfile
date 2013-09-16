@@ -7,7 +7,8 @@ gem 'bootstrap-sass', '2.3.2.0' #Twitter Web Design framework
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
-gem 'bootstrap-will_paginate', '0.0.9'
+gem 'kaminari'
+#gem 'bootstrap-will_paginate', '0.0.9'
 gem 'devise'
 
 group :development, :test do

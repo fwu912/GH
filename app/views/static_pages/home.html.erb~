@@ -1,12 +1,32 @@
 <div class="center hero-unit">
+	
 	<h1>Welcome to GeeHood</h1>
 	<h2>GeeHood is currently under construction! Please check back later.</h2>
 
 	<% unless user_signed_in? %>	
-		<%= link_to "Sign Up!", "#", class: "btn btn-large btn-primary" %>
+		<%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-large btn-primary" %>
 	<% end %>
+
+	<% if user_signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/item_form' %>
+      </section>
+    </aside>
+  </div>
+<% end %>
 
 </div>
 
+<% if Item.any? %>
+	
+
+	<% @items.each do |product| %>
+		<h2><%= product.description %></h2>
+	<% end %>
+<%= paginate @items, window: 2 %>
+<% end %>
+		
 
 

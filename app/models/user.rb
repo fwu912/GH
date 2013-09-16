@@ -8,5 +8,7 @@ class User < ActiveRecord::Base
 	# This locks up the db:migrate perhaps attr_accessible is already built in somewhere
 	#attr_accessible :email, :password, :password_confirmation
 
+	has_many :items
+
 	
 end

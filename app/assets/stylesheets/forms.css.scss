@@ -1,0 +1,23 @@
+/* forms */
+
+form {
+  input, textarea {
+    width: 100%;
+  }
+
+  input.boolean {
+    margin: 0.75em 0 0 1.5em;
+  }
+
+  .help-inline {
+    display: block;
+    padding-top: 5px;
+    margin-left: 150px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+  
+}
+

@@ -17,3 +17,67 @@
 	margin-top: 45px;
 	@include box_sizing;
 }
+
+/* forms */
+
+form {
+  input, textarea {
+    width: 100%;
+  }
+
+  input.boolean {
+    margin: 0.75em 0 0 1.5em;
+  }
+
+  .help-inline {
+    display: block;
+    padding-top: 5px;
+    margin-left: 150px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+  
+}
+
+/* Item */
+.items {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+
+.item {/*
+  margin: 20px auto;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  background: #eee; */
+}
+
+/* Thumbnails */
+.thumbnails {
+	
+}
+.thumbnails li {
+		padding-left: 15px;
+    width: 275px;
+    height: 200px;
+    float: none !important; /* to overwrite the default property on the bootstrap stylesheet */
+    display: inline-block;
+    *display: inline; /* ie7 support */
+    zoom: 1;
+}
+
+
