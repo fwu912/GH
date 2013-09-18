@@ -1,7 +1,11 @@
 		<header class="navbar navbar-fixed-top navbar-inverse">
 			<div class="navbar-inner">
 				<div class="container">
-					<%= link_to "GeeHood", root_path, id: "logo" %>
+					<% if user_signed_in? %>
+						<p id="welcome">Hi, <%= current_user.email %>!</p>
+					<% else %>				
+						<%= link_to "GeeHood", root_path, id: "logo" %>
+					<% end %>
 					<nav>
 						<ul class="nav pull-right">
 							<li><%= link_to "Home",			root_path %></li>

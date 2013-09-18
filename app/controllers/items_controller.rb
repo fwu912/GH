@@ -13,6 +13,9 @@ class ItemsController < ApplicationController
   def destroy
   end
 
+	def show
+	end
+
 	private
 
     def item_params

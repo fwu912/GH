@@ -1,17 +1,16 @@
 class StaticPagesController < ApplicationController
-  
-	# GET /posts
-  # GET /posts.json
-  # GET /posts.js	
+
 	def home
 		if Item.any?		
-			@items = Item.page(params[:page]).per(5)
+			@items = Item.paginate(:page => params[:page])
 		end
 		@item = current_user.items.build if user_signed_in?
-		
 
-
-  end
+		respond_to do |format|
+			format.html			
+			format.js
+		end
+	end
 
   def help
   end

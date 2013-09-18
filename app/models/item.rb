@@ -5,5 +5,6 @@ class Item < ActiveRecord::Base
 	validates :description, length: { maximum: 250 }
 	default_scope -> { order('created_at DESC') }
 
+	self.per_page = 15
 	
 end

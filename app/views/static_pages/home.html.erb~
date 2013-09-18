@@ -19,13 +19,18 @@
 
 </div>
 
-<% if Item.any? %>
-	
 
-	<% @items.each do |product| %>
-		<h2><%= product.description %></h2>
-	<% end %>
-<%= paginate @items, window: 2 %>
+
+<% if Item.any? %>
+	<h1>Listing Items</h1>
+	<div class="items">
+		<%= render :partial => 'shared/items', :locals => { :items => @items } %>
+	</div>
+	<%= link_to 'Load More Items', root_path(:page => @items.next_page), :class => 'load-more-items', :remote => true if @items.next_page %>
+
+
+
+	
 <% end %>
 		
 

@@ -1,7 +1,7 @@
 GeeHood::Application.routes.draw do
   
   devise_for :users
-	resources :items, only: [:create, :destroy]
+	resources :items, only: [:create, :destroy, :show]
 	root 'static_pages#home'
 		
 	match '/help',		to: 'static_pages#help',		via: 'get'

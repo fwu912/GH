@@ -1,5 +1,11 @@
-<% @items.each do |product| %>
-	<div class='items'>
-		<%= product.description %>
-	</div>
-<% end %>
+		<div class="center">			
+			<ul class="thumbnails">
+				<% @items.each do |product| %>					
+					<li class="span4">					
+							<h2><%= link_to "#{product.description}", product %></h2>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+
+
